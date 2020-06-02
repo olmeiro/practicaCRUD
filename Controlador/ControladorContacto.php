@@ -11,7 +11,7 @@ require_once('../Modelo/Contacto/Contacto.php');
 
 if(isset($_POST["Registrar"]))
 {
-    echo "Registrar";
+    //echo "Registrar";
     $Contacto -> setIdContacto(null);
     $Contacto -> setNombre($_POST["Nombre"]);
     $Contacto -> setApellido_1($_POST["Apellido_1"]);
