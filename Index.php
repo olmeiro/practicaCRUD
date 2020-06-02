@@ -12,23 +12,17 @@
 <body>
 
      <header class="header">
-     <h1 align="center">Modulos Kreemo</h1>
+     <h1 align="center">Kreemo Landpage</h1>
      </header >
      <section class="section-1" align="center">
 
-          <div class="section-1_card" align="center"><a type="submit" href="">Agenda Usuarios</a></div>
-          <div class="section-1_card" align="center"><a type="submit" href="Vista/Contacto/InsertarContacto.php">Gestion Clientes</a></div>
-          <div class="section-1_card" align="center"><a type="submit" href="">Agenda de Visitas</a></div>
+          
      </section>
      <section class="section-1">
-          <div class="section-1_card" align="center"><a type="button" href="vista/Cotizacion/ListarCotizacion.php">Cotizaciones</a></div>
-          <div class="section-1_card" align="center"><a type="button" href="">Agenda Maquinaria</a></div>
-          <div class="section-1_card" align="center"><a type="button" href="">Encuestas</a></div>
+          
 
      </section>
-     <section class="section-2">
-
-     </section>
+   
      <footer class="footer">
 
      </footer>
