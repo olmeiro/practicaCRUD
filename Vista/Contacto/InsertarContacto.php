@@ -37,7 +37,7 @@
                   </nav>
             <form action="../../Controlador/ControladorContacto.php" method="POST">
 
-                <div class="form-row">
+                <!-- <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="IdContacto">Id Del contacto</label>
                     <input type="text" class="form-control" id="IdContacto" required name="IdContacto">
@@ -45,7 +45,7 @@
                         Ingrese el Id del contacto.
                       </small>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="form-row">
                   <div class="form-group col-md-6">

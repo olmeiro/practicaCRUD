@@ -122,25 +122,25 @@
     //test of class:
 
 
-    $ContactoNuevo = new Contacto();
-    $ContactoNuevo->setNombre("Angelmiro");
-    $ContactoNuevo-> setApellido_1('Perea');
-    $ContactoNuevo-> setApellido_2('Suarez');
-    $ContactoNuevo-> setDocumento(1026140);
-    $ContactoNuevo-> setEstado(1);
-    $ContactoNuevo-> setCorreo('perea@.co');
-    $ContactoNuevo-> setTelefono(2782025);
-    $ContactoNuevo-> setCargo('CEO');
+    // $ContactoNuevo = new Contacto();
+    // $ContactoNuevo->setNombre("Angelmiro");
+    // $ContactoNuevo-> setApellido_1('Perea');
+    // $ContactoNuevo-> setApellido_2('Suarez');
+    // $ContactoNuevo-> setDocumento(1026140);
+    // $ContactoNuevo-> setEstado(1);
+    // $ContactoNuevo-> setCorreo('perea@.co');
+    // $ContactoNuevo-> setTelefono(2782025);
+    // $ContactoNuevo-> setCargo('CEO');
 
 
-    echo "nombre es : " . $ContactoNuevo->getNombre() . "<br>";
-    echo "Apellido 1: " . $ContactoNuevo->getApellido_1() . "<br>";
-    echo "Apellido 2: " . $ContactoNuevo->getApellido_2(). "<br>" ;
-    echo "Documento : " . $ContactoNuevo->getDocumento() . "<br>";
-    echo "Estado: " . $ContactoNuevo->getDocumento() . "<br>";
-    echo "Correo: " . $ContactoNuevo->getCorreo() . "<br>";
-    echo "Telefono: " . $ContactoNuevo-> getTelefono() . "<br>";
-    echo "Cargo: " . $ContactoNuevo-> getCargo() . "<br>";
+    // echo "nombre es : " . $ContactoNuevo->getNombre() . "<br>";
+    // echo "Apellido 1: " . $ContactoNuevo->getApellido_1() . "<br>";
+    // echo "Apellido 2: " . $ContactoNuevo->getApellido_2(). "<br>" ;
+    // echo "Documento : " . $ContactoNuevo->getDocumento() . "<br>";
+    // echo "Estado: " . $ContactoNuevo->getDocumento() . "<br>";
+    // echo "Correo: " . $ContactoNuevo->getCorreo() . "<br>";
+    // echo "Telefono: " . $ContactoNuevo-> getTelefono() . "<br>";
+    // echo "Cargo: " . $ContactoNuevo-> getCargo() . "<br>";
     
 
 ?>

@@ -12,7 +12,7 @@ require_once('../Modelo/Contacto/Contacto.php');
 if(isset($_POST["Registrar"]))
 {
     echo "Registrar";
-    $Contacto -> setIdContacto($_POST["IdContacto"]);
+    $Contacto -> setIdContacto(null);
     $Contacto -> setNombre($_POST["Nombre"]);
     $Contacto -> setApellido_1($_POST["Apellido_1"]);
     $Contacto -> setApellido_2($_POST["Apellido_2"]);
