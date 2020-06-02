@@ -5,6 +5,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Index Kreemo</title>
      <link rel="stylesheet" href="css/estilosIndex.css"></link>
+
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -18,7 +21,7 @@
           <div class="section-1_card" align="center"><a type="submit" href="">Agenda de Visitas</a></div>
      </section>
      <section class="section-1">
-          <div class="section-1_card" align="center"><a type="button" href="">Cotizaciones</a></div>
+          <div class="section-1_card" align="center"><a type="button" href="vista/Cotizacion/ListarCotizacion.php">Cotizaciones</a></div>
           <div class="section-1_card" align="center"><a type="button" href="">Agenda Maquinaria</a></div>
           <div class="section-1_card" align="center"><a type="button" href="">Encuestas</a></div>
 
@@ -30,5 +33,6 @@
 
      </footer>
 </body>
+
 
 </html>
