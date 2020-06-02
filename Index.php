@@ -14,7 +14,7 @@
      <section class="section-1" align="center">
 
           <div class="section-1_card" align="center"><a type="submit" href="">Agenda Usuarios</a></div>
-          <div class="section-1_card" align="center"><a type="submit" href="">Gestion Clientes</a></div>
+          <div class="section-1_card" align="center"><a type="submit" href="Vista/Contacto/InsertarContacto.php">Gestion Clientes</a></div>
           <div class="section-1_card" align="center"><a type="submit" href="">Agenda de Visitas</a></div>
      </section>
      <section class="section-1">

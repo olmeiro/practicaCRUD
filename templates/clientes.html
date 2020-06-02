@@ -1,12 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estiloClientes.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../css/estiloClientes.css">
+        <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Clientes</title>
-</head>
-<body>
-    <h1>Formulario Clientes</h1>
-</body>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+
+                <nav class="navbar navbar-dark bg-primary">
+                    <!-- Navbar content -->
+                    <a class="navbar-brand" href="#">Registro Clientes Kreemo</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+               
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Nombre del contacto</label>
+                    <input type="email" class="form-control" id="inputEmail4" required>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese nombre del contacto, sólo caracteres.
+                      </small>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Primer Apellido</label>
+                    <input type="password" class="form-control" id="inputPassword4" required>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese primer apellido del contacto, sólo caracteres.
+                      </small>
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Segundo apellido</label>
+                      <input type="email" class="form-control" id="inputEmail4">
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese segundo apellido del contacto, sólo caracteres.
+                      </small>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Documento</label>
+                      <input type="password" class="form-control" id="inputPassword4" required>
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese documento del contacto, sólo valores númericos.
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Estado</label>
+                      <input type="email" class="form-control" id="inputEmail4" required>
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese estado del contacto.
+                      </small>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Correo Electrónico</label>
+                      <input type="password" class="form-control" id="inputPassword4" required>
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese correo del contacto.
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Teléfono</label>
+                      <input type="email" class="form-control" id="inputEmail4" required>
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese teléfono del contacto, sólo valores númericos.
+                      </small>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Cargo</label>
+                      <input type="password" class="form-control" id="inputPassword4">
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Ingrese cargo del contacto, sólo caracteres.
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <button type="button" class="btn btn-primary btn-lg">Registrar</button>
+                        <button type="button" class="btn btn-secondary btn-lg">Limpiar</button>
+                        <button type="button" class="btn btn-success btn-lg">Volver</button>
+                      </div>
+                  </div>
+                
+              </form>
+        </div>
+        
+    </body>
+    <script src="../js/Contacto/contacto.js"></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </html>
