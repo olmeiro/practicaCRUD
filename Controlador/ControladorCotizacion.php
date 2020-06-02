@@ -9,10 +9,8 @@ $CrudCotizacion =new CrudCotizacion();
 //echo "Contrilador";
 
 if (isset($_POST{"Crear"})) {
-     echo "Crear";
-     echo "<br>";
 
-     $Cotizacion->setIdCotizacion($_POST["IdCotizacion"]);
+     $Cotizacion->setIdCotizacion(null);
      $Cotizacion->setIdEmpresa($_POST["IdEmpresa"]);
      $Cotizacion->setIdEstado($_POST["IdEstado"]);
      $Cotizacion->setIdEtapa($_POST["IdEtapa"]);
@@ -27,7 +25,7 @@ if (isset($_POST{"Crear"})) {
      $Cotizacion->setValor_Total($_POST["Valor_Total"]);
      $Cotizacion->setObservaciones($_POST["Observaciones"]);
 
-     echo $Cotizacion->getIdEmpresa();
+     //echo $Cotizacion->getIdEmpresa();
 
      $CrudCotizacion::InsertarCotizacion($Cotizacion);
 
