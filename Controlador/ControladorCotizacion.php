@@ -8,7 +8,7 @@ $Cotizacion = new Cotizacion();
 $CrudCotizacion =new CrudCotizacion();
 //echo "Contrilador";
 
-if (isset($_POST{"Crear"})) {
+if (isset($_POST["Crear"])) {
 
      $Cotizacion->setIdCotizacion(null);
      $Cotizacion->setIdEmpresa($_POST["IdEmpresa"]);
