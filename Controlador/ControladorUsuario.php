@@ -15,5 +15,20 @@ if(isset($_POST["btnRegistrarUsuario"])){
 
     $crudUsuario::InsertarUsuario($usuario);
 
+}else if (isset($_POST["Ingresar"])) {
+
+    if (isset($_POST["nombre"])==$usuario->getNombre() && isset($_POST["clave"])==$usuario->getClave()) {
+        header("location:../navegar.php");
+    } else {
+        //echo "usuario y/o clave inválido";
+        ?>
+        <script>
+            alert("usuario y/o clave inválido");
+            document.location="../Index.php";
+        </script>
+        <?php
+    }
 }
+
+
 ?>
