@@ -21,5 +21,21 @@
                 die();
             }
         }
+
+        public function validarIngreso($usuario){
+            $Db = Db::Conectar();
+            $ListaUsuario=[];
+            $Sql = $Db->query('SELECT nombre, clave FROM usuario');
+            $Sql->execute();
+
+            foreach ($Sql->fetchAll() as $usuario){
+            $myUsuario = new usuario();
+            //echo $Competencia['CodigoCompetencia']."----".$Competencia['NombreCompetencia'];
+            $myUsuario->setNombre($usuario['Nombre']);
+            $myUsuario->setClave($usuario['Clave']);
+            $ListaUsuario[]=$myUsuario;
+            }
+            return $ListaUsuario;
+        }
     }
 ?>
