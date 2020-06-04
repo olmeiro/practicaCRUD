@@ -18,7 +18,7 @@
 
           <div class="section-1_card" align="center"><a type="submit" href="Vista/Usuario/ingresarUsuario.php">Agenda Usuarios</a></div>
           <div class="section-1_card" align="center"><a type="submit" href="Vista/Contacto/InsertarContacto.php">Gestion Clientes</a></div>
-          <div class="section-1_card" align="center"><a type="submit" href="">Agenda de Visitas</a></div>
+          <div class="section-1_card" align="center"><a type="submit" href="Vista/Visitas/ingresarVisitas.php">Agenda de Visitas</a></div>
      </section>
      <section class="section-1">
           <div class="section-1_card" align="center"><a type="button" href="vista/Cotizacion/ListarCotizacion.php">Cotizaciones</a></div>
