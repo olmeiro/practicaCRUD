@@ -48,7 +48,6 @@
             Máquina:
             <br>
             <input id="maquina" name="maquina">
-            <select name="" id=""></select>
             <label id="validacion_maquina"></label>
             <br>
           </div>
@@ -69,9 +68,9 @@
 
           <input type="hidden" name="CrearMaquina" id="CrearMaquina">
           <button type="submit"  class="btn btn-secondary" name="btnregistrar_maquina" id="btnregistrar_maquina">Registrar</button>
-          <button  class="btn btn-secondary" name="btnlimpiar" id="btnlimpiar">Limpiar</button>
+          <!-- <button  class="btn btn-secondary" name="btnlimpiar" id="btnlimpiar">Limpiar</button>
           <button  class="btn btn-secondary" name="btnconsultar_maquina" id="btnconsultar_maquina">Consultar</button>
-          <button  class="btn btn-secondary" name="btnVolver" id="btnVolver" onclick="location.href='navegar.php'"> Volver</button>
+          <button  class="btn btn-secondary" name="btnVolver" id="btnVolver" onclick="location.href='practicacrud/navegar.php'"> Volver</button> -->
     </form>
 
     <p align="center" id="RespuestaTransaccion">Utilice el boton registrar para saber si el envio de datos fue exitosa o no</p>
