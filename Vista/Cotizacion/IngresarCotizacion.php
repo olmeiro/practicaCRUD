@@ -13,12 +13,7 @@
           <h1 align="center">Crear Cotizacion</h1>
 
           <form action="../../Controlador/ControladorCotizacion.php" method="post">
-               <!-- <div class="form-row" >
-                    <div class="form-group col-md-4">
-                         <label for="">Id Cotizacion</label>
-                         <input type="text" class="form-control" id="IdCotizacion" name="IdCotizacion">
-                    </div>
-               </div> -->
+               
                <div class="form-row" >
                     <div class="form-group col-md-4">
                          <label for="">Id Empresa</label>
