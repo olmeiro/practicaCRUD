@@ -104,12 +104,12 @@
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <div class="custom-control custom-radio">
-                      <input type="radio" value="1" id="customRadio1" name="Estado" class="custom-control-input">
+                      <input type="radio" value="Activo" id="customRadio1" name="Estado" class="custom-control-input">
                       <label class="custom-control-label" for="customRadio1">Contacto Activo</label>
                     </div>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input type="radio" value="0" id="customRadio2" name="Estado" class="custom-control-input">
+                      <input type="radio" value="Inactivo" id="customRadio2" name="Estado" class="custom-control-input">
                       <label class="custom-control-label" for="customRadio2">Contacto Inactvo</label>
                     </div>
                       <small id="customRadio2" class="form-text text-muted">

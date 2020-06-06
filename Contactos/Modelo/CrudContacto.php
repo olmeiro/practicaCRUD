@@ -111,7 +111,7 @@ class CrudContacto
                                                  Estado=:Estado,
                                                  IdCorreo=:Correo,
                                                  IdTelefono=:Telefono,
-                                                 Cargo=:Cargo
+                                                 Cargo=:Cargo,
                                                  WHERE Documento=:Documento');//para usar bindvalue para evitar sqlInjection
 
         $Sql->bindValue('IdContacto', $Contacto->getIdContacto());

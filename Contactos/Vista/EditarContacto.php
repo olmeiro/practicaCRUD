@@ -19,6 +19,9 @@
     <h1 align="center">Contacto</h1>
 
     <form id="frmPersona" action="../Controlador/ControladorContacto.php" method="POST">
+      IdContacto: <input type="text" name="IdContacto" id="IdContacto"
+      value="<?php echo $Contacto->getIdContacto();?>">
+      <br>
       Documento Contacto: <input type="text" name="Documento" id="Documento"
       value="<?php echo $Contacto->getDocumento();?>">
       <br>
