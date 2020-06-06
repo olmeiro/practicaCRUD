@@ -2,8 +2,8 @@
 
 // echo "controlador";
 
-require_once('../Modelo/Contacto/CrudContacto.php');
-require_once('../Modelo/Contacto/Contacto.php');
+require_once('../Modelo/CrudContacto.php');
+require_once('../Modelo/Contacto.php');
 
 
  $Contacto = new Contacto();
@@ -34,6 +34,25 @@ if(isset($_POST["Registrar"]))
     
 
     $CrudContacto::InsertarContacto($Contacto);
+}
+else if($_POST["Modificar"])
+{
+    $Contacto->setIdContacto($_POST['IdContacto']);
+    $Contacto->setNombre($_POST['Nombre']);
+    $Contacto->setApellido_1($_POST['Apellido_1']);
+    $Contacto->setApellido_2($_POST['Apellido_2']);
+    $Contacto->setDocumento($_POST['Documento']);
+    $Contacto->setEstado($_POST['Estado']);
+    $Contacto->setCorreo($_POST['Correo']);
+    $Contacto->setCargo($_POST['Telefono']);
+    $Contacto->setTelefono($_POST['Cargo']);
+
+    $CrudContacto::ModificarContacto($Contacto);
+ 
+}
+else if($_GET['Accion']=="EliminarContacto")
+{
+    $CrudContacto::EliminarContacto($_GET['Documento']);
 }
 
 ?>
