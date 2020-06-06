@@ -35,7 +35,7 @@
                       </ul>
                     </div>
                   </nav>
-            <form action="../../Controlador/ControladorContacto.php" method="POST">
+            <form action="../Controlador/ControladorContacto.php" method="POST">
 
                 <div class="form-row">
                   <div class="form-group col-md-6">
