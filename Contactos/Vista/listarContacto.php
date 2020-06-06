@@ -63,18 +63,7 @@ $ListaContactos = $CrudContacto->listarContactos();
                               <?php echo $Contacto->getDocumento(); ?>
                               </td>
                               <td>
-                              <?php 
-                              // $estado = $Contacto->getEstado();
-                              // var_dump($estado);   
-                               if($Contacto->getEstado() == "1")
-                               {
-                                    echo "Activo";
-                               }
-                               else{
-                                    echo "Inactivo";
-                               }
-
-                              ?>
+                              <?php if($Contacto->getEstado() == "1"){ echo "Activo";} else{ echo "Inactivo";}?>
                               </td>
                               <td>
                               <?php echo $Contacto->getCorreo(); ?>
