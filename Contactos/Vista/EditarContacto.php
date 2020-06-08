@@ -6,6 +6,9 @@
 
   $CrudContacto = new CrudContacto(); //Crear un objeto tipo CrudCompetencia
   $Contacto = $CrudContacto::ObtenerContacto($_GET["Documento"]);
+
+  $mysqli = new mysqli('localhost', 'root', '', 'practica_crudk');
+
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -34,8 +37,20 @@
       Documento Contacto: <input type="text" name="Documento" id="Documento"
       value="<?php echo $Contacto->getDocumento();?>">
       <br>
-      Estado: <input type="text" name="Estado" id="Estado"
-      value="<?php if ($Contacto->getEstado() == "1"){echo "Activo";}else {echo "Inactivo";}?>">
+      <!-- Estado: <input type="text" name="Estado" id="Estado"
+      value="<?php if ($Contacto->getEstado() == "1"){echo "Activo";}else {echo "Inactivo";}?>"> -->
+
+      <label for="">Estado del cliente:</label>
+      <select id="IdEstado"  name= "Estado" class="form-control">
+          <option value="0" >Seleccione un Estado</option>
+          <?php
+          $query = $mysqli -> query ("SELECT * FROM estado");
+          while ($valores = mysqli_fetch_array($query)) {
+          echo '<option value="'.$valores[IdEstado].'">'.$valores[Estado].'</option>';
+          }
+          ?>
+      </select>
+                  
       <br>
       Correo Electrónico: <input type="text" name="IdCorreo" id="Correo"
       value="<?php echo $Contacto->getCorreo(); ?>">

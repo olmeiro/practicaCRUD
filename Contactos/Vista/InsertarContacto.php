@@ -1,3 +1,13 @@
+<?php
+
+  require_once('../../conexion.php');
+
+
+  $mysqli = new mysqli('localhost', 'root', '', 'practica_crudk');
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -93,15 +103,27 @@
                    
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="Cargo">Cargo</label>
-                      <input type="text" class="form-control" id="Cargo" name="Cargo">
-                      <small id="valCargo" class="form-text text-muted">
-                        Ingrese cargo del contacto, sólo caracteres.
-                      </small>
+                        <label for="Cargo">Cargo</label>
+                        <input type="text" class="form-control" id="Cargo" name="Cargo">
+                        <small id="valCargo" class="form-text text-muted">
+                          Ingrese cargo del contacto, sólo caracteres.
+                        </small>
                     </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Estado del Contacto</label>
+                          <select id="IdEstado"  name= "Estado" class="form-control">
+                              <option value="0" >Seleccione un Estado</option>
+                              <?php
+                              $query = $mysqli -> query ("SELECT * FROM estado");
+                              while ($valores = mysqli_fetch_array($query)) {
+                              echo '<option value="'.$valores[IdEstado].'">'.$valores[Estado].'</option>';
+                              }
+                              ?>
+                          </select>
+                        </div>
                   </div>
 
-                  <div class="form-row">
+                  <!-- <div class="form-row">
                     <div class="form-group col-md-6">
                       <div class="custom-control custom-radio">
                       <input type="radio" value="Activo" id="customRadio1" name="Estado" class="custom-control-input">
@@ -116,7 +138,7 @@
                         Elija estado del contacto.
                       </small>
                     </div>
-                  </div>
+                  </div> -->
 
                   <div class="form-row">
                       <div class="form-group col-md-12">

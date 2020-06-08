@@ -72,7 +72,7 @@ $ListaCotizacion = $CrudCotizacion->ListarCotizacion();
                     <a href="EditarCotizacion.php?IdCotizacion=<?php echo $Cotizacion->getIdCotizacion();?>">Editar</a> 
                     </td>
                     <td>
-                    <a href="../../Controlador/ControladorCotizacion.php?IdCotizacion=<?php echo $Cotizacion->getIdCotizacion();?>&Accion=EliminarCotizacion">Eliminar</a> 
+                    <a href="../Cotizacion/Controlador/ControladorCotizacion.php?IdCotizacion=<?php echo $Cotizacion->getIdCotizacion();?>&Accion=EliminarCotizacion">Eliminar</a> 
                     </td>
 
                     
