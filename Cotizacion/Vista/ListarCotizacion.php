@@ -1,3 +1,15 @@
+<?php
+require_once('../../conexion.php');
+require_once('../Modelo/Cotizacion.php');
+require_once('../Modelo/CrudCotizacion.php');
+
+$CrudCotizacion = new CrudCotizacion();
+$ListaCotizacion = $CrudCotizacion->ListarCotizacion();
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,10 +46,39 @@
                     <th scope="col">VALOR TOTAL</th>
                     <th scope="col">OBSERVACIONES</th>
                     <th scope="col">EDITAR</th>
+                    <th scope="col">ELIMINAR</th>
                     </tr>
                </thead>
                <tbody>
+               <?php
+               foreach($ListaCotizacion as $Cotizacion) {
+                    ?>
+                    <tr>
+                    <td><?php echo $Cotizacion->getIdCotizacion();?></td>
+                    <td><?php echo $Cotizacion->getIdEmpresa();?></td>
+                    <td><?php echo $Cotizacion->getIdEstado();?></td>
+                    <td><?php echo $Cotizacion->getIdEtapa();?></td>
+                    <td><?php echo $Cotizacion->getIdJornada();?></td>
+                    <td><?php echo $Cotizacion->getIdModalidad();?></td>
+                    <td><?php echo $Cotizacion->getIdTipo_Concreto();?></td>
+                    <td><?php echo $Cotizacion->getIva();?></td>
+                    <td><?php echo $Cotizacion->getLozas();?></td>
+                    <td><?php echo $Cotizacion->getMetros_cubicos();?></td>
+                    <td><?php echo $Cotizacion->getTuberia();?></td>
+                    <td><?php echo $Cotizacion->getValor_Metro();?></td>
+                    <td><?php echo $Cotizacion->getValor_Total();?></td>
+                    <td><?php echo $Cotizacion->getObservaciones();?></td>
+                    <td>
+                    <a href="EditarCotizacion.php?IdCotizacion=<?php echo $Cotizacion->getIdCotizacion();?>">Editar</a> 
+                    </td>
+                    <td>
+                    <a href="../../Controlador/ControladorCotizacion.php?IdCotizacion=<?php echo $Cotizacion->getIdCotizacion();?>&Accion=EliminarCotizacion">Eliminar</a> 
+                    </td>
 
+                    
+                    <?php
+               }
+               ?>
                </tbody>
           </table>
      </div>
