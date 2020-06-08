@@ -37,10 +37,10 @@
       Estado: <input type="text" name="Estado" id="Estado"
       value="<?php if ($Contacto->getEstado() == "1"){echo "Activo";}else {echo "Inactivo";}?>">
       <br>
-      Correo Electrónico: <input type="text" name="Correo" id="Correo"
+      Correo Electrónico: <input type="text" name="IdCorreo" id="Correo"
       value="<?php echo $Contacto->getCorreo(); ?>">
       <br>
-      Teléfono contacto: <input type="text" name="Telefono" id="Telefono"
+      Teléfono contacto: <input type="text" name="IdTelefono" id="Telefono"
       value="<?php echo $Contacto->getTelefono(); ?>">
       <br>
       Cargo del contacto: <input type="text" name="Cargo" id="Cargo"
