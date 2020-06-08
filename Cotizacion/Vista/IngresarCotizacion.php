@@ -12,7 +12,7 @@
      <div class="container">
           <h1 align="center">Crear Cotizacion</h1>
 
-          <form action="../../Controlador/ControladorCotizacion.php" method="post">
+          <form action="../Controlador/ControladorCotizacion.php" method="post">
                
                <div class="form-row" >
                     <div class="form-group col-md-4">

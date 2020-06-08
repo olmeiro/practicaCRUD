@@ -1,7 +1,7 @@
 <?php
 
-require_once('../Modelo/Cotizacion/Cotizacion.php');
-require_once('../Modelo/Cotizacion/CrudCotizacion.php');
+require_once('../Modelo/Cotizacion.php');
+require_once('../Modelo/CrudCotizacion.php');
 
 
 $Cotizacion = new Cotizacion();
