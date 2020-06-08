@@ -21,7 +21,7 @@
           <div class="section-1_card" align="center"><a type="submit" href="Vista/Visitas/ingresarVisitas.php">Agenda de Visitas</a></div>
      </section>
      <section class="section-1">
-          <div class="section-1_card" align="center"><a type="button" href="vista/Cotizacion/ListarCotizacion.php">Cotizaciones</a></div>
+          <div class="section-1_card" align="center"><a type="button" href="Cotizacion/Vista/ListarCotizacion.php">Cotizaciones</a></div>
           <div class="section-1_card" align="center"><a type="button" href="Vista/Maquinaria/IngresarMaquinaria.php">Agenda Maquinaria</a></div>
           <div class="section-1_card" align="center"><a type="button" href="">Encuestas</a></div>
 
