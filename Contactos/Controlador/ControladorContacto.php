@@ -35,17 +35,16 @@ if(isset($_POST["Registrar"]))
 }
 else if(isset($_POST['Modificar']))
 {
-    $Contacto->setIdContacto($_POST['IdContacto']);
-    //$Contacto->setIdContacto(null);
+    // $Contacto->setIdContacto($_POST['IdContacto']);
+    $Contacto->setIdContacto(null);
     $Contacto->setNombre($_POST['Nombre']);
     $Contacto->setApellido_1($_POST['Apellido_1']);
     $Contacto->setApellido_2($_POST['Apellido_2']);
     $Contacto->setDocumento($_POST['Documento']);
     $Contacto->setEstado($_POST['Estado']);
-    $Contacto->setCorreo($_POST['Correo']);
-    $Contacto->setTelefono($_POST['Cargo']);
-    $Contacto->setCargo($_POST['Telefono']);
-   
+    $Contacto->setCorreo($_POST['IdCorreo']);
+    $Contacto->setTelefono($_POST['IdTelefono']);
+    $Contacto->setCargo($_POST['Cargo']);
 
     $CrudContacto::ModificarContacto($Contacto);
  
