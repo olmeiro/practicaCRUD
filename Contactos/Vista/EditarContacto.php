@@ -22,9 +22,6 @@
       IdContacto: <input type="text" name="IdContacto" id="IdContacto"
       value="<?php echo $Contacto->getIdContacto();?>">
       <br>
-      Documento Contacto: <input type="text" name="Documento" id="Documento"
-      value="<?php echo $Contacto->getDocumento();?>">
-      <br>
       Nombre Contacto: <input type="text" name="Nombre" id="Nombre"
       value="<?php echo $Contacto->getNombre(); ?>">
       <br>
@@ -33,6 +30,9 @@
       <br>
       Segundo Apellido: <input type="text" name="Apellido_2" id="Apellido_2"
       value="<?php echo $Contacto->getApellido_2(); ?>">
+      <br>
+      Documento Contacto: <input type="text" name="Documento" id="Documento"
+      value="<?php echo $Contacto->getDocumento();?>">
       <br>
       Estado: <input type="text" name="Estado" id="Estado"
       value="<?php if ($Contacto->getEstado() == "1"){echo "Activo";}else {echo "Inactivo";}?>">
