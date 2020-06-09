@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al login:
+{
+  //redireccionar al al login:
+  header("Location:index.php");
+}
+
+// echo $_SESSION["NombreUsuario"];
+// echo "Rol: " . $_SESSION["IdRol"];
+
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +43,7 @@
 
      </section>
      <section class="section-2">
-
-     
-
+     <a href="CerrarSession.php">Cerrar sesión</a>
      </section>
      <footer class="footer">
 

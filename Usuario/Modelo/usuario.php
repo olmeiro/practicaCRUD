@@ -5,6 +5,7 @@ class Usuario{
     private $Clave;
     private $TipoUsuario;
     private $Estado;
+    private $Existe;
 
     public function __construct(){}
 
@@ -46,6 +47,14 @@ class Usuario{
 
     public function getEstado(){
         return $this->Estado;
+    }
+
+    public function setExiste($Existe){
+        $this -> Existe = $Existe;
+    }
+
+    public function getExiste(){
+        return $this->Existe;
     }
 
 }
