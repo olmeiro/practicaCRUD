@@ -21,12 +21,16 @@ $ListaContactos = $CrudContacto->listarContactos();
 </head>
 <body>
      <div class="container">
-     <h1 align="center">Cotizaciones</h1>
-          <ul class="nav">
+     <h1 align="center">Lista De Contactos:</h1>
+          <ul class="nav nav-fill">
                <li class="nav-item">
-                    <a class="nav-link active" href="InsertarContacto.php">Crear Contactos</a>
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="InsertarContacto.php">Crear Contactos</a></button>
+               </li>
+               <li class="nav-item">
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reporteClientes.php" target="_blank">Imprimir PDF</a></button>
                </li>
           </ul>
+          <br>
           <table class="table table-responsive">
                <thead class="thead-dark">
                     <tr>
@@ -86,7 +90,7 @@ $ListaContactos = $CrudContacto->listarContactos();
                    ?>
                </tbody>
           </table>
-          <button type="button" name="button"><a href="../index.php">Volver</a></button>
+          <button type="button" class="btn btn-outline-dark"><a href="../index.php" style="color:black;">Volver</button>
      </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
