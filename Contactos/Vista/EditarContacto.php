@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- <link rel="stylesheet" href="css/estiloClientes.css"> -->
         <!-- CSS only -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.12/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Editar</title>
   </head>
@@ -113,8 +114,8 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="">Estado del Contacto</label>
-                          <select id="IdEstado"  name= "Estado" class="form-control">
-                              <option value="0" >Seleccione un Estado</option>
+                          <select id="Estado"  name= "Estado" class="form-control">
+                              <option value="" >Seleccione un Estado</option>
                               <?php
                               $query = $mysqli -> query ("SELECT * FROM estado");
                               while ($valores = mysqli_fetch_array($query)) {
@@ -122,6 +123,7 @@
                               }
                               ?>
                           </select>
+                          <label for="Estado" id="valEstado"></label>
                         </div>
                   </div>
 

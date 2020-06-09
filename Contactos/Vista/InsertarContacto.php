@@ -120,7 +120,7 @@
                     <div class="form-group col-md-6">
                         <label for="">Estado del Contacto</label>
                           <select id="Estado"  name= "Estado" class="form-control">
-                              <option value="0" >Seleccione un Estado</option>
+                              <option value="" >Seleccione un Estado</option>
                               <?php
                               $query = $mysqli -> query ("SELECT * FROM estado");
                               while ($valores = mysqli_fetch_array($query)) {
