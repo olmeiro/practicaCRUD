@@ -1,5 +1,24 @@
-function limpiar(){
-    alert("hola mundo");
+function limpiar()
+{
+    Swal.fire({
+        title: 'Deseas limpiar los campos?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, limpiar campos!'
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            'Campos limpios!',
+            'success'
+          )
+        }
+      });
+
+    $("input").val("");
+    $("select").val("");
+    $("span").val("");
 }
 
 $(document).ready(function(){

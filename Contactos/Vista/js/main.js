@@ -1,6 +1,3 @@
-function limpiar(){
-    alert("hola mundo");
-}
 
 $(document).ready(function(){
     $("#frmInsertarContacto").submit(function(event){
@@ -124,6 +121,28 @@ $(document).ready(function(){
     })
 })
 
+function limpiar()
+{
+    Swal.fire({
+        title: 'Deseas limpiar los campos?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, limpiar campos!'
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            'Campos limpios!',
+            'success'
+          )
+        }
+      });
+
+    $("input").val("");
+    $("select").val("");
+    $("span").val("");
+}
 
 
 
