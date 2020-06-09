@@ -16,8 +16,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- <link rel="stylesheet" href="css/estiloClientes.css"> -->
         <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Clientes</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.12/dist/sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Clientes</title>
     </head>
     <body>
         <div class="container">
@@ -45,23 +46,25 @@
                       </ul>
                     </div>
                   </nav>
-            <form action="../Controlador/ControladorContacto.php" method="POST">
+            <form action="../Controlador/ControladorContacto.php" method="POST" id="frmInsertarContacto" name="frmInsertarContacto">
 
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="Nombre">Nombre del contacto</label>
-                    <input type="text" class="form-control" id="Nombre" required name="Nombre">
+                    <input type="text" class="form-control" id="Nombre" name="Nombre">
                     <small id="valNombre" class="form-text text-muted">
                         Ingrese nombre del contacto, sólo caracteres.
                       </small>
+                      <label for="Nombre" id="valNombre"></label>
                   </div>
 
                   <div class="form-group col-md-6">
                     <label for="Apellido_1">Primer Apellido</label>
-                    <input type="text" class="form-control" id="Apellido_1" name="Apellido_1" required>
+                    <input type="text" class="form-control" id="Apellido_1" name="Apellido_1">
                     <small id="valApellido_1" class="form-text text-muted">
                         Ingrese primer apellido del contacto, sólo caracteres.
                       </small>
+                      <label for="Apellido_1" id="valApellido1"></label>
                   </div>
                 </div>
 
@@ -72,32 +75,36 @@
                       <small id="Apellido_2" class="form-text text-muted">
                         Ingrese segundo apellido del contacto, sólo caracteres.
                       </small>
+                      <label for="Apellido_1" id="valApellido2"></label>
                     </div>
 
                     <div class="form-group col-md-6">
                       <label for="Documento">Documento</label>
-                      <input type="number" class="form-control" id="Documento" name="Documento" required>
+                      <input type="number" class="form-control" id="Documento" name="Documento">
                       <small id="valDocumento" class="form-text text-muted">
                         Ingrese documento del contacto, sólo valores númericos.
                       </small>
+                      <label for="Documento" id="valDocumento"></label>
                     </div>
                   </div>
 
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="Correo">Correo Electrónico</label>
-                      <input type="Correo" class="form-control" id="Correo" name="Correo" required>
+                      <input type="Correo" class="form-control" id="Correo" name="Correo">
                       <small id="valCorreo" class="form-text text-muted">
                         Ingrese correo del contacto.
                       </small>
+                      <label for="Correo" id="valCorreo"></label>
                     </div>
 
                     <div class="form-group col-md-6">
                       <label for="Telefono">Teléfono</label>
-                      <input type="number" class="form-control" id="Telefono" name=Telefono required>
+                      <input type="number" class="form-control" id="Telefono" name=Telefono>
                       <small id="valTelefono" class="form-text text-muted">
                         Ingrese teléfono del contacto, sólo valores númericos.
                       </small>
+                      <label for="Telefono" id="valTelefono"></label>
                     </div>
                   </div>
                    
@@ -108,10 +115,11 @@
                         <small id="valCargo" class="form-text text-muted">
                           Ingrese cargo del contacto, sólo caracteres.
                         </small>
+                        <label for="Cargo" id="valCargo"></label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="">Estado del Contacto</label>
-                          <select id="IdEstado"  name= "Estado" class="form-control">
+                          <select id="Estado"  name= "Estado" class="form-control">
                               <option value="0" >Seleccione un Estado</option>
                               <?php
                               $query = $mysqli -> query ("SELECT * FROM estado");
@@ -120,40 +128,24 @@
                               }
                               ?>
                           </select>
+                          <label for="Estado" id="valEstado"></label>
                         </div>
                   </div>
 
-                  <!-- <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <div class="custom-control custom-radio">
-                      <input type="radio" value="Activo" id="customRadio1" name="Estado" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadio1">Contacto Activo</label>
-                    </div>
-                    </div>
-                    <div class="custom-control custom-radio">
-                      <input type="radio" value="Inactivo" id="customRadio2" name="Estado" class="custom-control-input">
-                      <label class="custom-control-label" for="customRadio2">Contacto Inactvo</label>
-                    </div>
-                      <small id="customRadio2" class="form-text text-muted">
-                        Elija estado del contacto.
-                      </small>
-                    </div>
-                  </div> -->
-
                   <div class="form-row">
                       <div class="form-group col-md-12">
-                        <input type="hidden" name="Registrar" id="Registrar">
-                        <button type="submit" class="btn btn-primary btn-lg">Registrar</button>
+                        <input type="hidden" name="Registrar">
+                        <button type="submit" class="btn btn-primary btn-lg" id="Registrar" name="Registrar">Registrar</button>
                         <button type="button" class="btn btn-secondary btn-lg">Limpiar</button>
                         <button type="button" class="btn btn-success btn-lg">Volver</button>
                       </div>
                   </div>
                 
-              </form>
+            </form>
         </div>
         
     </body>
-    <!-- <script src="../js/Contacto/contacto.js"></script> -->
+    <script src="js/main.js"></script>
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

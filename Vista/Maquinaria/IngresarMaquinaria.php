@@ -85,5 +85,5 @@
 </div>
 
 </body>
-<!-- <script src="../../js/Maquinaria/Maquinaria.js"></script> -->
+<script src="../../js/Maquinaria/Maquinaria.js"></script>
 </html>

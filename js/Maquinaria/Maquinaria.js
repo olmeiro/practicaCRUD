@@ -57,7 +57,8 @@ $(document).ready(function(){
             icon: 'success',
             title: 'Máquina agendada',
             text: 'La máquina se agendo con éxito',
-          })
+          });
+          document.FrmMaquinaria.submit();
         }
         else
         {
