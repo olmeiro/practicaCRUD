@@ -79,12 +79,12 @@ class CrudContacto
     {
       $Db = Db::Conectar();
       $listaContactos = [];
-      $Sql = $Db->query('SELECT * FROM contacto');
+      $Sql = $Db->query('SELECT contacto.Nombre, contacto.Apellido_1, contacto.Apellido_2, contacto.Documento, estado.Estado, 
+      contacto.IdCorreo, contacto.IdTelefono, contacto.Cargo FROM contacto INNER JOIN estado ON contacto.Estado = estado.IdEstado');
       $Sql->execute();
       foreach($Sql->fetchAll() as $Contacto)
       {
         $MiContacto = new Contacto();
-        $MiContacto->setIdContacto($Contacto['IdContacto']);
         $MiContacto->setNombre($Contacto['Nombre']);
         $MiContacto->setApellido_1($Contacto['Apellido_1']);
         $MiContacto->setApellido_2($Contacto['Apellido_2']);
@@ -103,8 +103,7 @@ class CrudContacto
     {
         $Db = Db::Conectar(); //Conectar a BBDD revisar conexion
         //Definir la insercion a realizar.
-        $Sql = $Db->prepare('UPDATE contacto SET IdContacto=:IdContacto,
-                                                 Nombre=:Nombre,
+        $Sql = $Db->prepare('UPDATE contacto SET Nombre=:Nombre,
                                                  Apellido_1=:Apellido_1,
                                                  Apellido_2=:Apellido_2,
                                                  Documento=:Documento,
@@ -128,7 +127,7 @@ class CrudContacto
         try
         {
           $Sql->execute();//ejecutar el UPDATE
-          echo "Modificación exitosa";
+          //echo "Modificación exitosa";
 
           ?>
           <script>
