@@ -16,17 +16,17 @@
      </header >
      <section class="section-1" align="center">
 
-     <form action="Controlador/ControladorUsuario.php" method="POST">
+     <form action="Usuario/Controlador/ControladorUsuario.php" method="POST">
           <div class="form-group">
                <label for="exampleInputEmail1">Usuario</label>
-               <input type="text" class="form-control" id="Usuario" name="Usuario" aria-describedby="emailHelp">
+               <input type="text" class="form-control" id="Nombre" name="Nombre">
           </div>
           <div class="form-group">
                <label for="exampleInputPassword1">Password</label>
-               <input type="password" class="form-control" id="Password" name="Password">
+               <input type="password" class="form-control" id="Clave" name="Clave">
           </div>
-         <input type="hidden" name="Ingresar" id="Ingresar">
-          <button type="submit" class="btn btn-primary">Ingresar</button>
+         <!-- <input type="hidden" name="Acceder" id="Ingresar"> -->
+          <button type="submit" name="Acceder" class="btn btn-primary">Ingresar</button>
      </form>
 
           

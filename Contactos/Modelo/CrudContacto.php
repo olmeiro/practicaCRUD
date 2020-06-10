@@ -35,7 +35,14 @@ class CrudContacto
         try
         {
           $Insert->execute();//ejecutar el INSERT
-          echo "Registro exitoso";
+          //echo "Registro exitoso";
+          ?>
+          <script>
+            alert("Registro éxitoso");
+            document.location.href = "../Vista/listarContacto.php";
+          </script>
+          <?php
+
         }
         catch(Exception $e)
         {

@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al login:
+{
+  //redireccionar al al login:
+  header("Location:../../index.php");
+}
+
   require_once('../../conexion.php');
 
 
@@ -75,7 +83,7 @@
                       <small id="Apellido_2" class="form-text text-muted">
                         Ingrese segundo apellido del contacto, sólo caracteres.
                       </small>
-                      <label for="Apellido_1" id="valApellido2"></label>
+                      <label for="Apellido_2" id="valApellido2"></label>
                     </div>
 
                     <div class="form-group col-md-6">
@@ -136,12 +144,14 @@
                       <div class="form-group col-md-12">
                         <input type="hidden" name="Registrar">
                         <button type="submit" class="btn btn-primary btn-lg" id="Registrar" name="Registrar">Registrar</button>
-                        <button type="button" class="btn btn-secondary btn-lg">Limpiar</button>
-                        <button type="button" class="btn btn-success btn-lg">Volver</button>
+                        
                       </div>
                   </div>
                 
             </form>
+
+            <button type="button" class="btn btn-secondary btn-lg" onclick="limpiar()">Limpiar</button>
+                        <button type="button" class="btn btn-outline-dark btn-lg"><a href="../index.php" style="color:black;">Volver</button>
         </div>
         
     </body>

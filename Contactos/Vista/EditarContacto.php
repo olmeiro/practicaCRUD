@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al login:
+{
+  //redireccionar al al login:
+  header("Location:../../index.php");
+}
+
   require_once('../../conexion.php');
   require_once('../Modelo/Contacto.php');
   require_once('../Modelo/CrudContacto.php');
@@ -65,6 +73,7 @@
                     <small id="valApellido_1" class="form-text text-muted">
                         Ingrese primer apellido del contacto, sólo caracteres.
                       </small>
+                      <label for="Apellido_1" id="valApellido1"></label>
                   </div>
                 </div>
 
@@ -75,6 +84,7 @@
                       <small id="Apellido_2" class="form-text text-muted">
                         Ingrese segundo apellido del contacto, sólo caracteres.
                       </small>
+                      <label for="Apellido_2" id="valApellido2"></label>
                     </div>
 
                     <div class="form-group col-md-6">
@@ -83,6 +93,7 @@
                       <small id="valDocumento" class="form-text text-muted">
                         Ingrese documento del contacto, sólo valores númericos.
                       </small>
+                      <label for="Documento" id="valDocumento"></label>
                     </div>
                   </div>
 
@@ -93,6 +104,7 @@
                       <small id="valCorreo" class="form-text text-muted">
                         Ingrese correo del contacto.
                       </small>
+                      <label for="Correo" id="valCorreo"></label>
                     </div>
 
                     <div class="form-group col-md-6">
@@ -101,6 +113,7 @@
                       <small id="valTelefono" class="form-text text-muted">
                         Ingrese teléfono del contacto, sólo valores númericos.
                       </small>
+                      <label for="Telefono" id="valTelefono"></label>
                     </div>
                   </div>
                    
@@ -111,6 +124,7 @@
                         <small id="valCargo" class="form-text text-muted">
                           Ingrese cargo del contacto, sólo caracteres.
                         </small>
+                        <label for="Cargo" id="valCargo"></label>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="">Estado del Contacto</label>
@@ -131,8 +145,8 @@
                       <div class="form-group col-md-12">
                         <input type="hidden" name="Modificar" id="Modificar">
                         <button type="submit" class="btn btn-primary btn-lg" name="Modificar" id="Modificar">Modificar</button>
-                        <!-- <button type="button" class="btn btn-secondary btn-lg" onclick=limpiar() id="BtnLimpiar">Limpiar</button> -->
-                        <button type="button" class="btn btn-success btn-lg">Volver</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick=limpiar() id="BtnLimpiar">Limpiar</button>
+                        <button type="button" class="btn btn-outline-dark  btn-lg"><a href="../index.php" style="color:black;">Volver</button>
                       </div>
                   </div>
                 
