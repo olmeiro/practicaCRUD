@@ -10,8 +10,6 @@ if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al log
 
 // echo $_SESSION["NombreUsuario"];
 // echo "Rol: " . $_SESSION["IdRol"];
-
-
  ?>
 
 <!DOCTYPE html>
@@ -43,7 +41,7 @@ if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al log
 
      </section>
      <section class="section-2">
-     <a href="CerrarSession.php">Cerrar sesión</a>
+     <a href="CerrarSesion.php">Cerrar sesión</a>
      </section>
      <footer class="footer">
 

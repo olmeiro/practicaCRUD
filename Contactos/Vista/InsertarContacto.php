@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al login:
+{
+  //redireccionar al al login:
+  header("Location:../../index.php");
+}
+
   require_once('../../conexion.php');
 
 

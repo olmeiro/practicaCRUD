@@ -1,9 +1,11 @@
 <?php
+
+require_once('../../conexion.php');
 require_once('../Modelo/usuario.php');
 require_once('../Modelo/crudUsuario.php');
 
-$usuario = new usuario();
-$crudUsuario = new crudUsuario();
+$Usuario = new usuario();
+$CrudUsuario = new crudUsuario();
 
 
 if(isset($_POST["Acceder"]))//Validar que se realiza la peticion de acceder
@@ -12,9 +14,10 @@ if(isset($_POST["Acceder"]))//Validar que se realiza la peticion de acceder
   $Usuario->setNombre($_POST["Nombre"]); //Asignar valor a atributo NombreUsuario
   $Usuario->setClave($_POST["Clave"]); //Asignar valor a atributo Contrasena
 
-  var_dump($Usuario);//Comprobacion de objeto
+  //var_dump($Usuario);//Comprobacion de objeto
   $Usuario = $CrudUsuario->ValidarAcceso($Usuario);
-  var_dump($Usuario);
+
+  //var_dump($Usuario);
 
   if($Usuario->getExiste() == 1)
   {
@@ -23,7 +26,7 @@ if(isset($_POST["Acceder"]))//Validar que se realiza la peticion de acceder
     //ahora la puedo utilizar en el menu.php
     $_SESSION["Nombre"] = $Usuario->getNombre();
     $_SESSION["IdUsuario"] = $Usuario->getIdUsuario();
-    $_SESSION["TipoUsuario"] = $Usuario->getTipoUsuario();
+    $_SESSION["Estado"] = $Usuario->getEstado();
     header("Location:../../navegar.php");
   }
   else

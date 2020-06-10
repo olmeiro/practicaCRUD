@@ -32,19 +32,16 @@
         $Sql->execute(); //Ejecutar la consulta, execute() es de la libreria PDO,
 
         $MiUsuario = new Usuario();
+        $MiUsuario->setExiste(0);
 
         if($Sql->rowCount() > 0) //Arroja el numero de registros arrojados por la consulta:
         {
             $DatosUsuario = $Sql->fetch(); //fetch : función para almancenar los datos arrojados por la consulta
 
             $MiUsuario->setIdUsuario($DatosUsuario['IdUsuario']);
+            $MiUsuario->setNombre($DatosUsuario['Nombre']);
             $MiUsuario->setTipoUsuario($DatosUsuario['TipoUsuario']);
-            $MiUsuario->setEstado($DatosUsuario['Estado']);
             $MiUsuario->setExiste(1); //Asignar al atributo
-        }
-        else
-        {
-            $MiUsuario->setExiste(0);
         }
 
         return $MiUsuario;
