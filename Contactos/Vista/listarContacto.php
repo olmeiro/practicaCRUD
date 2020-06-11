@@ -38,6 +38,9 @@ $ListaContactos = $CrudContacto->listarContactos();
                <li class="nav-item">
                <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reporteClientes.php" target="_blank">Imprimir PDF</a></button>
                </li>
+               <li class="nav-item">
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../Estado/Vista/listarEstado.php">Crear Nuevo Estado</a></button>
+               </li>
           </ul>
           <br>
           <table class="table table-responsive">
@@ -99,7 +102,7 @@ $ListaContactos = $CrudContacto->listarContactos();
                    ?>
                </tbody>
           </table>
-          <button type="button" class="btn btn-outline-dark"><a href="../index.php" style="color:black;">Volver</button>
+          <button type="button" class="btn btn-outline-dark"><a href="../../navegar.php" style="color:black;">Volver</button>
      </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
