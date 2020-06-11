@@ -90,7 +90,7 @@ $ListaCotizacion = $CrudCotizacion->ListarCotizacion();
                </tbody>
           </table>
 
-          <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../Navegacion.php">Volver</a></button>
+          <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../Navegar.php">Volver</a></button>
      </div>
 
      
