@@ -151,7 +151,7 @@ if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al log
             </form>
 
             <button type="button" class="btn btn-secondary btn-lg" onclick="limpiar()">Limpiar</button>
-                        <button type="button" class="btn btn-outline-dark btn-lg"><a href="../index.php" style="color:black;">Volver</button>
+            <button type="button" class="btn btn-outline-dark btn-lg"><a href="listarContacto.php" style="color:black;">Volver</button>
         </div>
         
     </body>
