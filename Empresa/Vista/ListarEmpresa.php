@@ -8,11 +8,11 @@ if (!(isset($_SESSION["Nombre"]))) {
 
 
 require_once('../../conexion.php');
-require_once('../Modelo/Cotizacion.php');
-require_once('../Modelo/CrudCotizacion.php');
+require_once('../Modelo/Empresa.php');
+require_once('../Modelo/CrudEmpresa.php');
 
-$CrudCotizacion = new CrudCotizacion();
-$ListaCotizacion = $CrudCotizacion->ListarCotizacion();
+$CrudEmpresa = new CrudEmpresa();
+$ListaEmpresa = $CrudEmpresa->ListarEmpresa();
 
 //var_dump($ListaCotizacion);
 
@@ -32,55 +32,47 @@ $ListaCotizacion = $CrudCotizacion->ListarCotizacion();
           <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
                <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
                <nav class="my-2 my-md-0 mr-md-3">
-                    <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
+                    <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciones</a>
                </nav>
                <a class="btn btn-outline-primary" href="../../CerrarSesion.php">Cerrar Seccion</a>
           </div>
 
-     <h1 align="center">COTIZACIÓNES</h1>
-     <br>
+          <h1 align="center">EMPRESAS</h1>
+          <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CrearCotizacion.php">Crear Cotizacion</a></button>
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CrearEmpresa.php">Crear Nueva Empresa</a></button>
                </li>
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfcotizacion.php" target="_blank">Reporte de Cotizaciones</a></button>
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de  Empresas</a></button>
                </li>
           </ul>
           <br>
           <table class="table table-bordered">
                <thead class="thead-dark">
                     <tr>
-                    <th scope="col">Cotización</th>
+                    <th scope="col">Id Eempresa</th>
                     <th scope="col">Empresa</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Metros <sup>3</sup></th>
-                    <th scope="col">Valor Metro <sup>3</sup></th>
-                    <th scope="col">Iva</th>
-                    <th scope="col">Valor Total</th>
-                    <th scope="col">Observaciones</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Direccion</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
                     </tr>
                </thead>
                <tbody>
                <?php
-               foreach($ListaCotizacion as $Cotizacion) {
+               foreach($ListaEmpresa as $Empresa) {
                     ?>
                     <tr>
-                    <td><?php echo $Cotizacion->getIdCotizacion();?></td>
-                    <td><?php echo $Cotizacion->getIdEmpresa();?></td>
-                    <td><?php echo $Cotizacion->getEstado();?></td>
-                    <td><?php echo $Cotizacion->getMetros_cubicos();?></td>
-                    <td><?php echo $Cotizacion->getValor_Metro();?></td>
-                    <td><?php echo $Cotizacion->getIva();?></td>
-                    <td><?php echo $Cotizacion->getValor_Total();?></td>
-                    <td><?php echo $Cotizacion->getObservaciones();?></td>
+                    <td><?php echo $Empresa->getIdEmpresa();?></td>
+                    <td><?php echo $Empresa->getEmpresa();?></td>
+                    <td><?php echo $Empresa->getCiudad();?></td>
+                    <td><?php echo $Empresa->getDireccion();?></td>
                     <td>
-                    <a href="EditarCotizacion.php?IdCotizacion=<?php echo $Cotizacion->getIdCotizacion();?>">Editar</a> 
+                    <a href="EditarEmpresa.php?IdEmpresa=<?php echo $Empresa->getIdEmpresa();?>">Editar</a> 
                     </td>
                     <td>
-                    <a href="../Controlador/ControladorCotizacion.php?IdCotizacion=<?php echo $Cotizacion->getIdCotizacion();?>&Accion=EliminarCotizacion">Eliminar</a> 
+                    <a href="../Controlador/ControladorEmpresa.php?IdEmpresa=<?php echo $Empresa->getIdEmpresa();?>&Accion=EliminarEmpresa">Eliminar</a> 
                     </td>
 
                     

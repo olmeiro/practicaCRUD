@@ -37,6 +37,7 @@ if(!(isset($_SESSION["Nombre"]))) //si la sesión no existe redireccionar al log
      <section class="section-1">
           <div class="section-1_card" align="center"><a type="button" href="Cotizacion/Vista/ListarCotizacion.php">Cotizaciones</a></div>
           <div class="section-1_card" align="center"><a type="button" href="Vista/Maquinaria/IngresarMaquinaria.php">Agenda Maquinaria</a></div>
+          <div class="section-1_card" align="center"><a type="button" href="Empresa/Vista/ListarEmpresa.php">Empresas</a></div>
           <div class="section-1_card" align="center"><a type="button" href="">Encuestas</a></div>
 
      </section>
